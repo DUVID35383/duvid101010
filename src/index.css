@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+@layer utilities {
+  /* Print Optimization */
+  @media print {
+    body {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-size: 12pt !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    .print-only {
+      display: block !important;
+    }
+
+    .print-card {
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: none !important;
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      page-break-inside: avoid;
+    }
+
+    .print-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Print only the document preview area inside the preview modal */
+    body.print-preview-active * {
+      visibility: hidden !important;
+    }
+
+    body.print-preview-active .doc-preview-backdrop {
+      display: none !important;
+    }
+
+    body.print-preview-active .doc-preview-root {
+      position: static !important;
+      display: block !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      background: none !important;
+    }
+
+    body.print-preview-active #doc-preview-print-area,
+    body.print-preview-active #doc-preview-print-area * {
+      visibility: visible !important;
+    }
+
+    body.print-preview-active #doc-preview-print-area {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+  }
+}

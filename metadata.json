@@ -1,0 +1,6 @@
+{
+  "name": "מחשבון ואומדן לחדרים ניידים",
+  "description": "מערכת ייעודית לתכנון, תמחור והוצאת הצעות מחיר לבניית חדרים ניידים על גלגלים כולל חישוב קונסטרוקציה וסריקת חשבוניות",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

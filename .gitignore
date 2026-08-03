@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+/assets/
+server.cjs
+server.cjs.map
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
